@@ -4,8 +4,8 @@ import sharp from 'sharp';
 // import Compressor from 'compressorjs';
 // import ExifReader from 'exifreader';
 
-const toke = process.env.BOT_API_KEY;
-const token = '7035670601:AAGm8l2ATEOFuNoftUyBY8eG5jVuCT8UCgI';
+const token = process.env.BOT_API_KEY;
+// const token = '7035670601:m8l2ATEOFuNoftUyBY8eG5jVuCT8UCgI';
 const bot = new TelegramBot(token, { polling: true, filepath: false });
 
 let picMsgId;
