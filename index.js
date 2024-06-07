@@ -1,27 +1,12 @@
 import 'dotenv/config'
-import express from 'express';
 import { Buffer, Blob } from 'node:buffer';
 import TelegramBot from 'node-telegram-bot-api';
 import sharp from 'sharp';
 // import Compressor from 'compressorjs';
 // import ExifReader from 'exifreader';
 
-// Create an Express application
-const app = express();
-app.use(express.json())
-// Define a route
-app.get('/', (req, res) => {
- console.log(req.body)
-  res.send(`hello world`);
-});
-
-// Start the server
-app.listen(3000, () => {
-  console.log('Server is listening on port 3000');
-});
 
 const token = process.env.BOT_API_KEY;
-// const token = '7035670601:AAGm8l2ATEOFuNoftUyBY8eG5jVuCT8UCgI';
 const bot = new TelegramBot(token, { polling: true, filepath: false });
 
 let picMsgId;
